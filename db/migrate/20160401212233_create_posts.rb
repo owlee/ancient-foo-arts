@@ -5,7 +5,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :state
       t.string :slug
       t.datetime :publishDate
-      t.string :network
+      t.string :networks
 
       t.timestamps null: false
     end

@@ -11,24 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160401193853) do
+ActiveRecord::Schema.define(version: 20160401212233) do
 
   create_table "articles", force: :cascade do |t|
-    t.string   "thumbnail"
+    t.integer  "post_id"
     t.string   "headline"
-    t.string   "networks"
-    t.string   "state"
-    t.string   "slug"
     t.string   "subHeadline"
     t.string   "articleType"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "articles", ["post_id"], name: "index_articles_on_post_id"
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "thumbnail"
+    t.string   "state"
+    t.string   "slug"
     t.datetime "publishDate"
+    t.string   "networks"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   create_table "videos", force: :cascade do |t|
+    t.integer  "post_id"
     t.string   "name"
-    t.string   "thumbnail"
     t.text     "description"
     t.string   "title"
     t.string   "longTitle"
@@ -37,18 +45,16 @@ ActiveRecord::Schema.define(version: 20160401193853) do
     t.string   "ageGate"
     t.string   "classification"
     t.string   "subClassification"
-    t.string   "networks"
     t.boolean  "noads"
     t.boolean  "prime"
     t.boolean  "subscription"
     t.boolean  "downloadable"
     t.string   "origin"
     t.string   "genre"
-    t.string   "state"
-    t.string   "slug"
-    t.datetime "publishDate"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
+
+  add_index "videos", ["post_id"], name: "index_videos_on_post_id"
 
 end
