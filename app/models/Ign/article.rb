@@ -1,3 +1,4 @@
+require 'open-uri'
 class Ign::Article
 
   def self.get_articles

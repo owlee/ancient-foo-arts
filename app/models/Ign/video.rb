@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class Ign::Video
 
   def self.get_videos
