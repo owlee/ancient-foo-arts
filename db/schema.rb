@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160401183456) do
+ActiveRecord::Schema.define(version: 20160401193853) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "thumbnail"
@@ -24,6 +24,31 @@ ActiveRecord::Schema.define(version: 20160401183456) do
     t.datetime "publishDate"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.string   "name"
+    t.string   "thumbnail"
+    t.text     "description"
+    t.string   "title"
+    t.string   "longTitle"
+    t.integer  "duration"
+    t.string   "url"
+    t.string   "ageGate"
+    t.string   "classification"
+    t.string   "subClassification"
+    t.string   "networks"
+    t.boolean  "noads"
+    t.boolean  "prime"
+    t.boolean  "subscription"
+    t.boolean  "downloadable"
+    t.string   "origin"
+    t.string   "genre"
+    t.string   "state"
+    t.string   "slug"
+    t.datetime "publishDate"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
 end
