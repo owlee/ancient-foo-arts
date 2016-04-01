@@ -1,7 +1,5 @@
 class Post < ActiveRecord::Base
   extend FriendlyId
   friendly_id :slug
-
-  has_one :article
-  has_one :video
+  belongs_to :postable, polymorphic: true
 end

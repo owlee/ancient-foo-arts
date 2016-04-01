@@ -1,7 +1,6 @@
 class CreateVideos < ActiveRecord::Migration
   def change
     create_table :videos do |t|
-      t.belongs_to :post, index: true
       t.string :name
       t.text :description
       t.string :title

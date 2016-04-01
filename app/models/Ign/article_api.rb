@@ -21,12 +21,13 @@ class Ign::ArticleApi
         if post.nil?
           #break #prevent unnecessary iterations
         else
-          Article.where(
+          a1 = Article.where(
               post_id: post.id,
               headline: article["metadata"]["headline"],
               subHeadline: article["metadata"]["subHeadline"],
               articleType: article["metadata"]["articleType"]
           ).create
+          Article.update post.id, _id: 2
         end
 
       end

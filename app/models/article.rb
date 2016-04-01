@@ -1,3 +1,3 @@
 class Article < ActiveRecord::Base
-  belongs_to :post
+  has_one :post, as: :postable
 end
