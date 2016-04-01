@@ -2,6 +2,11 @@ class Ign::Video < ActiveRecord::Base
 
   def self.get_videos
     api = open 'http://ign-apis.herokuapp.com/videos?'
-    videos = JSON.parse api.read
+    if api.status.first == "200"
+      videos = JSON.parse api.read
+    else
+      #throw some error
+    end
+
   end
 end
