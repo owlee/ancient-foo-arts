@@ -1,4 +1,4 @@
-class Ign::Video < ActiveRecord::Base
+class Ign::Video
 
   def self.get_videos
     api = open 'http://ign-apis.herokuapp.com/videos?'
