@@ -8,31 +8,37 @@ class Ign::VideoApi
       videos = JSON.parse api.read
 
       videos["data"].each do |video|
-        Video.where(
-            name: video["metadata"]["name"],
+
+        post = Post.first_or_create(
             thumbnail: video["thumbnail"],
-            description: video["metadata"]["description"],
-            title: video["metadata"]["title"],
-            longTitle: video["metadata"]["longTitle"],
-            duration: video["metadata"]["duration"],
-            url: video["metadata"]["url"],
-            ageGate: video["metadata"]["ageGate"],
-            classification: video["metadata"]["classification"],
-            subClassification: video["metadata"]["subClassification"],
-            networks: video["metadata"]["networks"],
-            noads: video["metadata"]["noads"],
-            prime: video["metadata"]["prime"],
-            subscription: video["metadata"]["subscription"],
-            downloadable: video["metadata"]["downloadable"],
-            origin: video["metadata"]["origin"],
-            genre: video["metadata"]["genre"],
             state: video["metadata"]["state"],
             slug: video["metadata"]["slug"],
-            publishDate: video["metadata"]["publishDate"].to_datetime
-        ).first_or_create
-      end
+            publishDate: video["metadata"]["publishDate"].to_datetime,
+            networks: video["metadata"]["networks"]
+        )
 
-     else
+        if !post.nil?
+          Video.where(
+              post_id: post.id,
+              name: video["metadata"]["name"],
+              description: video["metadata"]["description"],
+              title: video["metadata"]["title"],
+              longTitle: video["metadata"]["longTitle"],
+              duration: video["metadata"]["duration"],
+              url: video["metadata"]["url"],
+              ageGate: video["metadata"]["ageGate"],
+              classification: video["metadata"]["classification"],
+              subClassification: video["metadata"]["subClassification"],
+              noads: video["metadata"]["noads"],
+              prime: video["metadata"]["prime"],
+              subscription: video["metadata"]["subscription"],
+              downloadable: video["metadata"]["downloadable"],
+              origin: video["metadata"]["origin"],
+              genre: video["metadata"]["genre"],
+          ).create
+        end
+      end
+    else
       #throw some error
     end
   end

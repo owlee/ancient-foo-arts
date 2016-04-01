@@ -9,16 +9,24 @@ class Ign::ArticleApi
       articles = JSON.parse api.read
 
       articles["data"].each do |article|
-        Article.where(
-            headline: article["metadata"]["headline"],
+
+        post = Post.first_or_create(
             thumbnail: article["thumbnail"],
-            networks: article["metadata"]["networks"],
             state: article["metadata"]["state"],
             slug: article["metadata"]["slug"],
-            subHeadline: article["metadata"]["subHeadline"],
-            articleType: article["metadata"]["articleType"],
-            publishDate: article["metadata"]["publishDate"].to_datetime
-        ).first_or_create
+            publishDate: article["metadata"]["publishDate"].to_datetime,
+            networks: article["metadata"]["networks"]
+        )
+
+        if !post.nil?
+          Article.where(
+              post_id: post.id,
+              headline: article["metadata"]["headline"],
+              subHeadline: article["metadata"]["subHeadline"],
+              articleType: article["metadata"]["articleType"]
+          ).create
+        end
+
       end
     else
       #THROW some error

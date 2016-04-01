@@ -1,4 +1,3 @@
 class Video < ActiveRecord::Base
-  extend FriendlyId
-  friendly_id :slug
+  belongs_to :post
 end

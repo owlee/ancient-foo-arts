@@ -1,8 +1,8 @@
 class CreateVideos < ActiveRecord::Migration
   def change
     create_table :videos do |t|
+      t.belongs_to :post, index: true
       t.string :name
-      t.string :thumbnail
       t.text :description
       t.string :title
       t.string :longTitle
@@ -11,16 +11,12 @@ class CreateVideos < ActiveRecord::Migration
       t.string :ageGate
       t.string :classification
       t.string :subClassification
-      t.string :networks
       t.boolean :noads
       t.boolean :prime
       t.boolean :subscription
       t.boolean :downloadable
       t.string :origin
       t.string :genre
-      t.string :state
-      t.string :slug
-      t.datetime :publishDate
 
       t.timestamps null: false
     end
