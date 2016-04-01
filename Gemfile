@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 # --- Custom Gems that I added --
 gem 'json'
 gem 'bootstrap-sass'
+gem 'friendly_id'
 
 # --- \ Custom Gems that I added end --
 

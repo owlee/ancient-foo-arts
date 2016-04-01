@@ -1,12 +1,12 @@
 class PostController < ApplicationController
   def index
-
     binding.pry
-    @articles = Ign::Article.get_articles
-    @videos = Ign::Video.get_videos
+    Ign::ArticleApi.get_articles
+    Ign::VideoApi.get_videos
 
-    @count = articles["count"] + videos["count"]
-    @posts << articles["data"] << videos["data"]
-
+    @articles = Article.all
+    @videos = Video.all
+    @posts = @articles + @videos
+    @posts = @posts.order :publishDate
   end
 end
