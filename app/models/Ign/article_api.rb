@@ -17,6 +17,7 @@ class Ign::ArticleApi
             slug: article["metadata"]["slug"],
             publishDate: article["metadata"]["publishDate"].to_datetime,
             networks: article["metadata"]["networks"]
+
         ).first_or_create
         if post.nil?
           #break #prevent unnecessary iterations
