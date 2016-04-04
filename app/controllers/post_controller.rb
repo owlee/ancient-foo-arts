@@ -1,12 +1,11 @@
 class PostController < ApplicationController
   def index
-    binding.pry
-    Ign::ArticleApi.get_articles
-    Ign::VideoApi.get_videos
+    #depend on seed file to get articles for now.
+    #Ign::ArticleApi.get_articles
+    #Ign::VideoApi.get_videos
 
-    @articles = Article.all
-    @videos = Video.all
-    @posts = @articles + @videos
-    @posts = @posts.order :publishDate
+    @articles = Post.where(postable_type: Article.first.class)
+    @videos = Post.where(postable_type: Video.first.class)
+    @posts = Post.all.order(:publishDate).reverse
   end
 end
