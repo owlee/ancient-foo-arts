@@ -1,1 +1,25 @@
-<h1>Hi, this is a test header</h1>
+<h1>Posts</h1>
+<ul id="posts">
+  <% @posts.each do |post| %>
+      <li>
+        <% if post.postable_type == "Article" %>
+            Article</br>
+            <% if post.publish_age[:hour] > 0 %>
+                <%= post.publish_age[:hour] %> hours ago</br>
+            <% elsif post.publish_age[:min] > 0 %>
+                <%= post.publish_age[:min] %> minutes ago</br>
+            <% else %>
+                <%= post.publish_age[:sec] %> seconds ago</br>
+            <% end %>
+
+            <%= post.postable.headline %></br>
+
+
+        <% elsif post.postable_type == "Video" %>
+            Video</br>
+            <%= post.postable.name %></br>
+            Published at <%= post.publishDate %></br>
+        <% end %>
+      </li>
+  <% end %>
+</ul>
