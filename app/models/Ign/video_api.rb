@@ -9,35 +9,41 @@ class Ign::VideoApi
 
       videos["data"].each do |video|
 
-        post = Post.where(
-            thumbnail: video["thumbnail"],
-            state: video["metadata"]["state"],
-            slug: video["metadata"]["slug"],
-            publishDate: video["metadata"]["publishDate"].to_datetime,
-            networks: video["metadata"]["networks"]
+        v1 = Video.where(
+            name: video["metadata"]["name"],
+            description: video["metadata"]["description"],
+            title: video["metadata"]["title"],
+            longTitle: video["metadata"]["longTitle"],
+            duration: video["metadata"]["duration"],
+            url: video["metadata"]["url"],
+            ageGate: video["metadata"]["ageGate"],
+            classification: video["metadata"]["classification"],
+            subClassification: video["metadata"]["subClassification"],
+            noads: video["metadata"]["noads"],
+            prime: video["metadata"]["prime"],
+            subscription: video["metadata"]["subscription"],
+            downloadable: video["metadata"]["downloadable"],
+            origin: video["metadata"]["origin"],
+            genre: video["metadata"]["genre"],
         ).first_or_create
 
-        if post.nil?
+        if v1.nil?
           #break #prevent unnecssary iterations
         else
-          Video.where(
-              post_id: post.id,
-              name: video["metadata"]["name"],
-              description: video["metadata"]["description"],
-              title: video["metadata"]["title"],
-              longTitle: video["metadata"]["longTitle"],
-              duration: video["metadata"]["duration"],
-              url: video["metadata"]["url"],
-              ageGate: video["metadata"]["ageGate"],
-              classification: video["metadata"]["classification"],
-              subClassification: video["metadata"]["subClassification"],
-              noads: video["metadata"]["noads"],
-              prime: video["metadata"]["prime"],
-              subscription: video["metadata"]["subscription"],
-              downloadable: video["metadata"]["downloadable"],
-              origin: video["metadata"]["origin"],
-              genre: video["metadata"]["genre"],
-          ).create
+          post = Post.where(
+              thumbnail: video["thumbnail"],
+              state: video["metadata"]["state"],
+              slug: video["metadata"]["slug"],
+              publishDate: video["metadata"]["publishDate"].to_datetime,
+              networks: video["metadata"]["networks"],
+              postable_type: v1.class,
+              postable_id: v1.id
+          ).first_or_create
+
+          raise 'Post already Exists, this case should not happen.' if post.nil?
+
+          # note to self
+          # Video.first.post == Post.first.postable
         end
       end
     else

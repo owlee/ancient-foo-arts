@@ -11,26 +11,30 @@ class Ign::ArticleApi
 
       articles["data"].each do |article|
 
-        post = Post.where(
-            thumbnail: article["thumbnail"],
-            state: article["metadata"]["state"],
-            slug: article["metadata"]["slug"],
-            publishDate: article["metadata"]["publishDate"].to_datetime,
-            networks: article["metadata"]["networks"]
-
+        a1 = Article.where(
+            headline: article["metadata"]["headline"],
+            subHeadline: article["metadata"]["subHeadline"],
+            articleType: article["metadata"]["articleType"]
         ).first_or_create
-        if post.nil?
+
+        if a1.nil?
           #break #prevent unnecessary iterations
         else
-          a1 = Article.where(
-              post_id: post.id,
-              headline: article["metadata"]["headline"],
-              subHeadline: article["metadata"]["subHeadline"],
-              articleType: article["metadata"]["articleType"]
-          ).create
-          Article.update post.id, _id: 2
-        end
+          post = Post.where(
+              thumbnail: article["thumbnail"],
+              state: article["metadata"]["state"],
+              slug: article["metadata"]["slug"],
+              publishDate: article["metadata"]["publishDate"].to_datetime,
+              networks: article["metadata"]["networks"],
+              postable_type: a1.class,
+              postable_id: a1.id
+          ).first_or_create
 
+          raise 'Post already Exists, this case should not happen.' if post.nil?
+
+          # note to self
+          # Article.first.post == Post.first.postable
+        end
       end
     else
       #THROW some error

@@ -14,7 +14,6 @@
 ActiveRecord::Schema.define(version: 20160401212233) do
 
   create_table "articles", force: :cascade do |t|
-    t.integer  "post_id"
     t.string   "headline"
     t.string   "subHeadline"
     t.string   "articleType"
@@ -22,20 +21,21 @@ ActiveRecord::Schema.define(version: 20160401212233) do
     t.datetime "updated_at",  null: false
   end
 
-  add_index "articles", ["post_id"], name: "index_articles_on_post_id"
-
   create_table "posts", force: :cascade do |t|
+    t.integer  "postable_id"
+    t.string   "postable_type"
     t.string   "thumbnail"
     t.string   "state"
     t.string   "slug"
     t.datetime "publishDate"
     t.string   "networks"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
+  add_index "posts", ["postable_type", "postable_id"], name: "index_posts_on_postable_type_and_postable_id"
+
   create_table "videos", force: :cascade do |t|
-    t.integer  "post_id"
     t.string   "name"
     t.text     "description"
     t.string   "title"
@@ -54,7 +54,5 @@ ActiveRecord::Schema.define(version: 20160401212233) do
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
-
-  add_index "videos", ["post_id"], name: "index_videos_on_post_id"
 
 end
