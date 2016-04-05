@@ -161,7 +161,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass
+  autoprefixer-rails
+  bootstrap-sass (~> 3.3.6)
   byebug
   coffee-rails (~> 4.1.0)
   friendly_id

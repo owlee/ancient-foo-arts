@@ -1,19 +1,13 @@
 <h1>Posts</h1>
-<%= will_paginate @posts %>
 <div class="container">
-
-
   <% @posts.each do |post| %>
       <div class="row">
-
-
         <div class="col-md-3">
-          Padding 1
         </div>
         <div class="col-md-6 col-sm-12 col-xs-12">
           <% if post.postable_type == "Article" %>
               Article</br>
-
+              <%= post.publish_age_less %><br/>
 
               Published at <%= post.publishDate %></br>
 
@@ -24,8 +18,7 @@
 
           <% elsif post.postable_type == "Video" %>
               Video</br>
-
-
+              <%= post.publish_age_less %><br/>
               Published at <%= post.publishDate %></br>
               <%= post.postable.name %></br>
 
@@ -34,9 +27,7 @@
           <% end %>
         </div>
         <div class="col-md-3">
-          Padding 3
         </div>
-
       </div>
   <% end %>
 </div>
