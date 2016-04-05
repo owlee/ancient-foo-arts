@@ -1,25 +1,61 @@
 <h1>Posts</h1>
-<ul id="posts">
+
+<div class="container">
+
+
   <% @posts.each do |post| %>
-      <li>
-        <% if post.postable_type == "Article" %>
-            Article</br>
-            <% if post.publish_age[:hour] > 0 %>
-                <%= post.publish_age[:hour] %> hours ago</br>
-            <% elsif post.publish_age[:min] > 0 %>
-                <%= post.publish_age[:min] %> minutes ago</br>
-            <% else %>
-                <%= post.publish_age[:sec] %> seconds ago</br>
-            <% end %>
-
-            <%= post.postable.headline %></br>
+      <div class="row">
 
 
-        <% elsif post.postable_type == "Video" %>
-            Video</br>
-            <%= post.postable.name %></br>
-            Published at <%= post.publishDate %></br>
-        <% end %>
-      </li>
+        <div class="col-md-3">
+          Padding 1
+        </div>
+        <div class="col-md-6">
+          <% if post.postable_type == "Article" %>
+              Article</br>
+
+              <% if post.publish_age[:day] > 0 %>
+                  <%= post.publish_age[:day] %> days ago</br>
+              <% elsif post.publish_age[:hour] > 0 %>
+                  <%= post.publish_age[:hour] %> hours ago</br>
+              <% elsif post.publish_age[:min] > 0 %>
+                  <%= post.publish_age[:min] %> minutes ago</br>
+              <% else %>
+                  <%= post.publish_age[:sec] %> seconds ago</br>
+              <% end %>
+              Published at <%= post.publishDate %></br>
+
+              <%= post.postable.headline %></br>
+
+              <%= image_tag post.thumbnail %>
+              </br>
+
+          <% elsif post.postable_type == "Video" %>
+              Video</br>
+
+              <% if post.publish_age[:day] > 0 %>
+                  <%= post.publish_age[:day] %> days ago</br>
+              <% elsif post.publish_age[:hour] > 0 %>
+                  <%= post.publish_age[:hour] %> hours ago</br>
+              <% elsif post.publish_age[:min] > 0 %>
+                  <%= post.publish_age[:min] %> minutes ago</br>
+              <% else %>
+                  <%= post.publish_age[:sec] %> seconds ago</br>
+              <% end %>
+              Published at <%= post.publishDate %></br>
+              <%= post.postable.name %></br>
+
+              <%= image_tag post.thumbnail %>
+              </br>
+          <% end %>
+        </div>
+        <div class="col-md-3">
+          Padding 3
+        </div>
+
+      </div>
   <% end %>
-</ul>
+
+</div>
+
+
