@@ -14,15 +14,7 @@
           <% if post.postable_type == "Article" %>
               Article</br>
 
-              <% if post.publish_age[:day] > 0 %>
-                  <%= post.publish_age[:day] %> days ago</br>
-              <% elsif post.publish_age[:hour] > 0 %>
-                  <%= post.publish_age[:hour] %> hours ago</br>
-              <% elsif post.publish_age[:min] > 0 %>
-                  <%= post.publish_age[:min] %> minutes ago</br>
-              <% else %>
-                  <%= post.publish_age[:sec] %> seconds ago</br>
-              <% end %>
+
               Published at <%= post.publishDate %></br>
 
               <%= post.postable.headline %></br>
