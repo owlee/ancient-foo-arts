@@ -4,11 +4,16 @@ class Post < ActiveRecord::Base
   belongs_to :postable, polymorphic: true
 
   def publish_age
-    binding.pry
     age = Hash.new
-    age[:sec] = Time.now - self.publishDate
-    age[:hour] = age[:sec]/60
-    age[:day] = age[:sec]/3600
+    sec = Time.now - self.publishDate
+
+    age[:day] = (sec/(24*60*60)).floor
+    t1 = sec/(24*60*60) - age[:day]
+    age[:hour] = (t1*24).floor
+    t2 = (t1*24) - age[:hour]
+    age[:min] = (t2*60).floor
+    t3 = (t2*60) - age[:min]
+    age[:sec] = (t3*60).floor
     age
   end
 end
