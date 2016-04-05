@@ -4,8 +4,8 @@ class PostController < ApplicationController
     #Ign::ArticleApi.get_articles
     #Ign::VideoApi.get_videos
 
-    @articles = Post.where(postable_type: Article.first.class)
-    @videos = Post.where(postable_type: Video.first.class)
-    @posts = Post.all.order(:publishDate).reverse
+    #@articles = Post.where(postable_type: Article.first.class)
+    #@videos = Post.where(postable_type: Video.first.class)
+    @posts = Post.all.paginate(page: params[:page], per_page: 10).order('publishDate DESC')
   end
 end

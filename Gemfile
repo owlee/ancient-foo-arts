@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'json'
 gem 'bootstrap-sass'
 gem 'friendly_id'
+gem 'will_paginate'
 
 # --- \ Custom Gems that I added end --
 
