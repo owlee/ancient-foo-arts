@@ -1,0 +1,25 @@
+/* =================== */
+/*      Foo Style
+/* =================== */
+div.main-page {
+    background-color: #000001;
+}
+div.main-page-title {
+    margin-top: 10px;
+    margin-bottom: 3px;
+    background-color: #191D20;
+
+}
+h4 {
+    color: #FFFFFF;
+    font-family: ;
+}
+h5 {
+    color: #757882;
+    font-family: ;
+}
+
+img {
+    max-width:100%;
+    height:auto;
+}

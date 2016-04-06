@@ -4,26 +4,23 @@
       <div class="row">
         <div class="col-md-3">
         </div>
-        <div class="col-md-6 col-sm-12 col-xs-12">
+        <div class="main-page col-md-6 col-sm-12 col-xs-12">
           <% if post.postable_type == "Article" %>
-              Article</br>
-              <%= post.publish_age_less %><br/>
-
-              Published at <%= post.publishDate %></br>
-
-              <%= post.postable.headline %></br>
-
+              <div class="main-page-title">
+                <h5><%= post.publish_age_less %></h5>
+                <h4><%= post.postable.headline %></h4>
+              </div>
               <%= image_tag post.thumbnail %>
               </br>
 
           <% elsif post.postable_type == "Video" %>
-              Video</br>
-              <%= post.publish_age_less %><br/>
-              Published at <%= post.publishDate %></br>
-              <%= post.postable.name %></br>
-
+              <div class="main-page-title">
+                <h5><%= post.publish_age_less %></h5>
+                <h4><%= post.postable.name %></h4>
+              </div>
               <%= image_tag post.thumbnail %>
               </br>
+
           <% end %>
         </div>
         <div class="col-md-3">

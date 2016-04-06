@@ -8,4 +8,8 @@ class PostController < ApplicationController
     #@videos = Post.where(postable_type: Video.first.class)
     @posts = Post.all.paginate(page: params[:page], per_page: 10).order('publishDate DESC')
   end
+
+  def show
+
+  end
 end
