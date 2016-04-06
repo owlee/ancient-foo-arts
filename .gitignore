@@ -22,3 +22,5 @@
 
 # And vim swp files
 *.swp
+
+.DS_Store

@@ -1,6 +1,13 @@
 /* =================== */
 /*      Foo Style
 /* =================== */
+/*@font-face {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: normal;
+  src: url(font-path("HelveticaNeueLTStd Lt.w0ff")) format('woff');
+}*/
+
 div.main-page {
     background-color: #000001;
 }
@@ -12,11 +19,11 @@ div.main-page-title {
 }
 h4 {
     color: #FFFFFF;
-    font-family: ;
+    font-family: sans-serif;
 }
 h5 {
     color: #757882;
-    font-family: ;
+    #font-family: 'Helvetica Neue LT Std 45 Light';
 }
 
 img {
