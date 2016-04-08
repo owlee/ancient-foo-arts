@@ -12,21 +12,46 @@ div.main-page {
     background-color: #000001;
 }
 div.main-page-title {
-    margin-top: 10px;
-    margin-bottom: 3px;
+    #margin-top: 10px;
+    #margin-bottom: 3px;
     background-color: #191D20;
 
 }
-h4 {
+h5 {
     color: #FFFFFF;
     font-family: sans-serif;
 }
-h5 {
+p {
     color: #757882;
     #font-family: 'Helvetica Neue LT Std 45 Light';
 }
 
 img {
-    max-width:100%;
-    height:auto;
+    min-height: 100%;
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+    #position: fixed;
+    top: 0;
+    left: 0;
+}
+
+hr {
+    border-color: #BA232C;
+    height: 2px;
+    border-style: solid;
+}
+
+table {
+    table-layout: fixed;
+    border: none;
+    border-collapse: collapse;
+}
+
+table td {
+    border-top: none !important;
+}
+
+tr {
+    border-color: #000001;
 }

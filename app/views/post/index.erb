@@ -4,26 +4,29 @@
       <div class="row">
         <div class="col-md-3">
         </div>
-        <div class="main-page col-md-6 col-sm-12 col-xs-12">
-          <% if post.postable_type == "Article" %>
-              <div class="main-page-title">
-                <h5><%= post.publish_age_less %></h5>
-                <h4><%= post.postable.headline %></h4>
-              </div>
-              <%= image_tag post.thumbnail %>
-              </br>
-
-          <% elsif post.postable_type == "Video" %>
-              <div class="main-page-title">
-                <h5><%= post.publish_age_less %></h5>
-                <h4><%= post.postable.name %></h4>
-              </div>
-              <%= image_tag post.thumbnail %>
-              </br>
-
-          <% end %>
+        <div class="main-page col-md-5 col-sm-12 col-xs-12">
+          <table class="table">
+            <tr>
+              <td class="col-md-12">
+                <div class="main-page-title">
+                  <hr>
+                  <p><%= post.publish_age_less %></p>
+                  <% if post.postable_type == "Article" %>
+                      <h5><%= post.postable.headline %></h5>
+                  <% elsif post.postable_type == "Video" %>
+                      <h5><%= post.postable.name %></h5>
+                  <% end %>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <%= image_tag post.thumbnail %>
+              </td>
+            </tr>
+          </table>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
         </div>
       </div>
   <% end %>
