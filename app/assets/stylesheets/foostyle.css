@@ -8,19 +8,30 @@
   src: url(font-path("HelveticaNeueLTStd Lt.w0ff")) format('woff');
 }*/
 
+/*  __________________   */
+/*     Custom Bars       */
+/*  __________________   */
+
 div.main-page {
     background-color: #000001;
 }
+
 div.main-page-title {
     #margin-top: 10px;
     #margin-bottom: 3px;
     background-color: #191D20;
 
 }
+
+/*  ____________________   */
+/*   Overriding Defaults   */
+/*  ____________________   */
+
 h5 {
     color: #FFFFFF;
     font-family: sans-serif;
 }
+
 p {
     color: #757882;
     #font-family: 'Helvetica Neue LT Std 45 Light';
