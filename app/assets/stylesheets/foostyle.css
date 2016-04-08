@@ -12,14 +12,18 @@
 /*     Custom Bars       */
 /*  __________________   */
 
-div.main-page {
+.main-page {
     background-color: #000001;
 }
 
-div.main-page-title {
+.main-page-title {
     #margin-top: 10px;
     #margin-bottom: 3px;
     background-color: #191D20;
+
+}
+.row-margin-less {
+    margin: 0;
 
 }
 
@@ -57,10 +61,13 @@ table {
     table-layout: fixed;
     border: none;
     border-collapse: collapse;
+    border-spacing: 0;
 }
 
 table td {
     border-top: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 tr {
