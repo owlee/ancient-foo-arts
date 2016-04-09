@@ -5,17 +5,17 @@
           <tr>
             <td class="main-page-title">
               <hr>
-              <p><%= post.publish_age_less %></p>
-              <% if post.postable_type == "Article" %>
-                  <h5><%= post.postable.headline %></h5>
-              <% elsif post.postable_type == "Video" %>
-                  <h5><%= post.postable.name %></h5>
-              <% end %>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <%= image_tag post.thumbnail %>
+              <div class="title-text">
+                <p><%= post.publish_age_less %></p>
+                <% if post.postable_type == "Article" %>
+                    <h5><%= post.postable.headline %></h5>
+                <% elsif post.postable_type == "Video" %>
+                    <h5><%= post.postable.name %></h5>
+                <% end %>
+              </div>
+              <div class="img">
+                <%= image_tag post.thumbnail %>
+              </div>
             </td>
           </tr>
       <% end %>

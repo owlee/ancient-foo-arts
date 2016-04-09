@@ -12,26 +12,22 @@
 /*     Custom Bars       */
 /*  __________________   */
 
+.container-left-align {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
 .main-page {
     background-color: #000001;
     padding: 10px;
 }
 
 .main-page-title {
-    #margin-top: 10px;
-    #margin-bottom: 3px;
     background-color: #191D20;
-
 }
 
-.row-margin-less {
-    margin: 0;
-
-}
-
-.container-left-align {
-    margin-left: 0 !important;
-    padding-left: 0 !important;
+.title-text{
+    padding: 8px 0px 30px 13px;
 }
 
 /*  ____________________   */
@@ -46,6 +42,7 @@ h5 {
 p {
     color: #757882;
     #font-family: 'Helvetica Neue LT Std 45 Light';
+    margin: 0px 0px -7px 0px !important;
 }
 
 img {
@@ -61,8 +58,9 @@ img {
 hr {
     border-color: #BA232C;
     border-style: solid;
+    height: 2px;
     margin: 0;
-    width: 20%;
+    width: 25%;
 
 }
 
@@ -70,13 +68,13 @@ table {
     table-layout: fixed;
     border: none;
     border-collapse: collapse;
-    border-spacing: 0;
+    border-spacing: 5px;
 }
 
 table td {
     border-top: none !important;
     padding: 0 !important;
-    margin: 0 !important;
+    margin: 5px !important;
 }
 
 tr {
