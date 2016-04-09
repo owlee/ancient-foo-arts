@@ -1,12 +1,12 @@
 /* =================== */
 /*      Foo Style
 /* =================== */
-/*@font-face {
+@font-face {
   font-family: 'Helvetica Neue';
   font-style: normal;
   font-weight: normal;
-  src: url(font-path("HelveticaNeueLTStd Lt.w0ff")) format('woff');
-}*/
+  src: url(font-path("HelveticaNeueLTStdLT.w0ff")) format('woff');
+}
 
 /*  __________________   */
 /*     Custom Bars       */
@@ -41,7 +41,7 @@ h5 {
 
 p {
     color: #757882;
-    #font-family: 'Helvetica Neue LT Std 45 Light';
+    font-family: 'Helvetica Neue';
     margin: 0px 0px -7px 0px !important;
 }
 
