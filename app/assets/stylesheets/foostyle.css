@@ -57,6 +57,7 @@ img {
 
 hr {
     border-color: #BA232C;
+    color: #BA232C;
     border-style: solid;
     height: 2px;
     margin: 0;
@@ -67,8 +68,8 @@ hr {
 table {
     table-layout: fixed;
     border: none;
-    border-collapse: collapse;
-    border-spacing: 5px;
+    border-collapse: separate;
+    border-spacing: 11px;
 }
 
 table td {
