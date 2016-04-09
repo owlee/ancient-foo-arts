@@ -14,6 +14,7 @@
 
 .main-page {
     background-color: #000001;
+    padding: 10px;
 }
 
 .main-page-title {
@@ -22,9 +23,15 @@
     background-color: #191D20;
 
 }
+
 .row-margin-less {
     margin: 0;
 
+}
+
+.container-left-align {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
 }
 
 /*  ____________________   */
