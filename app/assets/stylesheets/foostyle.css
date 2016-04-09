@@ -60,8 +60,10 @@ img {
 
 hr {
     border-color: #BA232C;
-    height: 2px;
     border-style: solid;
+    margin: 0;
+    width: 20%;
+
 }
 
 table {
