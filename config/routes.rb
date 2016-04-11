@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   root 'post#index', as: '/'
 
+  get '/app' => 'post#appview'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

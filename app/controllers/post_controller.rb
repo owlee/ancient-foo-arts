@@ -9,6 +9,10 @@ class PostController < ApplicationController
     @posts = Post.all.paginate(page: params[:page], per_page: 10).order('publishDate DESC')
   end
 
+  def appview
+    @posts = Post.all.paginate(page: params[:page], per_page: 10).order('publishDate DESC')
+  end
+
   def show
 
   end
