@@ -10,12 +10,13 @@
         <% @arr.each do |post, index| %>
             <tr>
               <td>
-                <%= index %>
+                <span class="td-left"><%= sprintf '%02d', index %></span>
+                <span class="td-right">
+                  <%= truncate post.postable.headline, length: 50, separator: ' ' %></br>
+                  <%= truncate post.postable.subHeadline, length: 50, separator: ' ' %>
+                </span>
               </td>
-              <td>
-                <%= post.postable.headline %>
-              </td>
-            <tr>
+            </tr>
         <% end %>
       </table>
     </div>
