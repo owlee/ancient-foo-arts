@@ -12,6 +12,50 @@
 /*     Custom Bars       */
 /*  __________________   */
 
+.btn-active {
+    padding: 9.5px 19px;
+    background-color: #CC2211;
+    border-color: #CC2211;
+    color: #fff;
+    -webkit-border-radius: 27px;
+    -moz-border-radius: 27px;
+    border-radius: 27px;
+    font-size: 14px;
+    text-decoration: none;
+    vertical-align: middle;
+    display: inline;
+    pointer-events: none;
+    cursor: default;
+}
+
+.btn-inactive {
+    color: #CC2211;
+    background-color: #fff;
+    border: 1px solid #CC2211;
+    padding: 9.5px 19px;
+    -webkit-border-radius: 27px;
+    -moz-border-radius: 27px;
+    border-radius: 27px;
+    font-size: 14px;
+    text-decoration: none;
+    vertical-align: middle;
+    display: inline;
+}
+
+.btn-inactive:hover {
+   color: #CC2211;
+}
+
+.btn-left {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.btn-right {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
 .container-left-align {
     margin-left: 0 !important;
     padding-left: 0 !important;
@@ -73,21 +117,6 @@ hr {
     height: 2px;
     margin: 0;
     width: 25%;
-}
-
-/* tab color */
-.nav-tabs > li > a {
-    color: #CC2211;
-    background-color: #fff;
-    border: 1px solid #CC2211;
-    font-size: 14px;
-}
-
-/* active tab color */
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-    background-color: #CC2211;
-    border-color: #CC2211;
-    color: #fff;
 }
 
 table {

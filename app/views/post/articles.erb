@@ -1,7 +1,7 @@
 <div class="container container-left-align">
   <div class="main-page col-md-5 col-sm-12 col-xs-12">
-    <%= link_to "Articles", articles_path, class: "btn btn-primary" %>
-    <%= link_to "Videos", videos_path, class: "btn btn-primary" %>
+    <%= link_to "Articles", articles_path, class: "btn-active btn-left" %>
+    <%= link_to "Videos", videos_path, class: "btn-inactive btn-right" %>
     <ol>
       <% @articles.each do |post| %>
           <li>
