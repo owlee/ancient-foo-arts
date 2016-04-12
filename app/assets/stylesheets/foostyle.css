@@ -2,10 +2,10 @@
 /*      Foo Style
 /* =================== */
 @font-face {
-  font-family: 'Helvetica Neue';
-  font-style: normal;
-  font-weight: normal;
-  src: url(font-path("HelveticaNeueLTStdLT.w0ff")) format('woff');
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: normal;
+    src: url(font-path("HelveticaNeueLTStdLT.w0ff")) format('woff');
 }
 
 /*  __________________   */
@@ -15,9 +15,20 @@
 .container-left-align {
     margin-left: 0 !important;
     padding-left: 0 !important;
+    background-color: #000000 !important;
+}
+
+.container-left-align-app {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
 }
 
 .main-page {
+    background-color: #FFFFFF;
+    padding: 10px;
+}
+
+.main-page-app {
     background-color: #000001;
     padding: 10px;
 }
@@ -26,7 +37,7 @@
     background-color: #191D20;
 }
 
-.title-text{
+.title-text {
     padding: 8px 0px 30px 13px;
 }
 
@@ -62,18 +73,17 @@ hr {
     height: 2px;
     margin: 0;
     width: 25%;
-
 }
 
 /* tab color */
-.nav-tabs>li>a {
+.nav-tabs > li > a {
     background-color: #CC2211;
     border-color: #CC2211;
-    color:#fff;
+    color: #fff;
 }
 
 /* active tab color */
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
     color: #CC2211;
     background-color: #fff;
     border: 1px solid #CC2211;
