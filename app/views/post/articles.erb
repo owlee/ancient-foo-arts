@@ -1,4 +1,3 @@
-<div class="col-md-1"></div>
 <div class="container main-page col-md-3 col-sm-12 col-xs-12">
   <div class="main-page-inner">
     <div class="row" align="center">
@@ -9,17 +8,29 @@
       <table>
         <% @arr.each do |post, index| %>
             <tr>
-              <td>
-                <span class="td-left"><%= sprintf '%02d', index %></span>
-                <span class="td-right">
+              <td class="col-left" align="center">
+                <span class="headline-text"><%= sprintf '%02d', index %></span>
+              </td>
+              <td class="col-right" align="left">
+                <span class="headline-text">
                   <%= truncate post.postable.headline, length: 50, separator: ' ' %></br>
-                  <%= truncate post.postable.subHeadline, length: 50, separator: ' ' %>
                 </span>
               </td>
+            </tr><!--
+            !--><tr>
+              <td class="row-bottom"></td>
+              <td class="col-right row-bottom" align="left">
+                <span class="subheadline-text">
+                <%= truncate post.postable.subHeadline, length: 50, separator: ' ' %>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th></th>
             </tr>
         <% end %>
       </table>
     </div>
   </div>
 </div>
-<div class="col-md-8"></div>
+<div class="col-md-9"></div>
