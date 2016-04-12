@@ -1,23 +1,24 @@
-<div class="container container-left-align">
-  <div class="main-page col-md-5 col-sm-12 col-xs-12">
-    <%= link_to "Articles", articles_path, class: "btn-active btn-left" %>
-    <%= link_to "Videos", videos_path, class: "btn-inactive btn-right" %>
-    <ol>
-      <% @articles.each do |post| %>
-          <li>
-            <%= post.postable.headline %></br>
-          </li>
-      <% end %>
-    </ol>
-
-    <%# @videos.each do |post| %>
-    <%#= post.postable.name %></br>
-    <%# end %>
-  </div>
-  <div class="col-md-3">
-  </div>
-  <div class="col-md-4">
+<div class="col-md-1"></div>
+<div class="container main-page col-md-5 col-sm-12 col-xs-12">
+  <div class="main-page-inner">
+    <div class="row" align="center">
+      <%= link_to "Articles", articles_path, class: "btn-active btn-left" %>
+      <%= link_to "Videos", videos_path, class: "btn-inactive btn-right" %>
+    </div>
+    <div class="row">
+      <table>
+        <% @arr.each do |post, index| %>
+            <tr>
+              <td>
+                <%= index %>
+              </td>
+              <td>
+                <%= post.postable.headline %>
+              </td>
+            <tr>
+        <% end %>
+      </table>
+    </div>
   </div>
 </div>
-<%#= will_paginate @videos %>
-<%#= will_paginate @articles %>
+<div class="col-md-6"></div>
