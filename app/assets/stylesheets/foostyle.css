@@ -13,33 +13,35 @@
 /*  __________________   */
 
 .btn-active {
-    padding: 9.5px 19px;
     background-color: #CC2211;
-    border-color: #CC2211;
+    border: 1px solid #CC2211;
     color: #fff;
+    padding: 5px 50px 5px 40px;
     -webkit-border-radius: 27px;
     -moz-border-radius: 27px;
     border-radius: 27px;
     font-size: 14px;
     text-decoration: none;
     vertical-align: middle;
-    display: inline;
+    display: inline-block;
     pointer-events: none;
     cursor: default;
+    position: relative;
 }
 
 .btn-inactive {
     color: #CC2211;
     background-color: #fff;
     border: 1px solid #CC2211;
-    padding: 9.5px 19px;
+    padding: 5px 50px 5px 40px;
     -webkit-border-radius: 27px;
     -moz-border-radius: 27px;
     border-radius: 27px;
     font-size: 14px;
     text-decoration: none;
     vertical-align: middle;
-    display: inline;
+    display: inline-block;
+    position: relative;
 }
 
 .btn-inactive:hover {
@@ -49,11 +51,13 @@
 .btn-left {
     border-top-right-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
+    float: left;
 }
 
 .btn-right {
     border-top-left-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
+    float: left;
 }
 
 .container-left-align {
