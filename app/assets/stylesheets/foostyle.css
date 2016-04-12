@@ -77,17 +77,17 @@ hr {
 
 /* tab color */
 .nav-tabs > li > a {
-    background-color: #CC2211;
-    border-color: #CC2211;
-    color: #fff;
-}
-
-/* active tab color */
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
     color: #CC2211;
     background-color: #fff;
     border: 1px solid #CC2211;
     font-size: 14px;
+}
+
+/* active tab color */
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    background-color: #CC2211;
+    border-color: #CC2211;
+    color: #fff;
 }
 
 table {
