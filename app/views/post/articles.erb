@@ -1,4 +1,4 @@
-<div class="container main-page col-md-3 col-sm-12 col-xs-12">
+<div class="container main-page col-md-3 col-sm-3 col-xs-12">
   <div class="main-page-inner">
     <div class="row" align="center">
       <%= link_to "Articles", articles_path, class: "btn-active btn-left" %><!--
@@ -21,7 +21,7 @@
               <td class="row-bottom"></td>
               <td class="col-right row-bottom" align="left">
                 <span class="subheadline-text">
-                <%= truncate post.postable.subHeadline, length: 50, separator: ' ' %>
+                <%= post.postable.subHeadline.nil? ? "&nbsp;".html_safe : truncate(post.postable.subHeadline, length: 50, separator: ' ') %>
                 </span>
               </td>
             </tr>
@@ -33,4 +33,4 @@
     </div>
   </div>
 </div>
-<div class="col-md-9"></div>
+<div class="col-md-9 col-xs-3"></div>
