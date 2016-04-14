@@ -75,7 +75,9 @@
 
 .main-page {
     background-color: #000001;
+    width: 349px;
     padding: 10px;
+    align-items: center;
 }
 
 .main-page-app {
@@ -96,6 +98,7 @@
 
 .subheadline-text {
     font-size: 13px;
+    margin-bottom: 100px;
 }
 
 .title-text {
@@ -147,13 +150,16 @@ table {
     border: none;
     border-collapse: separate;
     border-spacing: 5px;
-    width: 100%;
+    width: 334px;
+    margin-left: 13px;
+    background-color: #ffffff;
+    align-items: center;
+    border-radius: 3px
 }
 
 td {
     border-top: none !important;
     padding: 0 !important;
-    margin: 5px !important;
     max-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -162,10 +168,12 @@ td {
 
 td.col-left {
     width: 12%;
+    padding: 0;
 }
 
 td.col-right {
     width: 88%;
+    padding: 0;
 }
 
 td.row-bottom {
@@ -178,5 +186,6 @@ td.row-bottom-last {
 
 tr {
     border-color: #000001;
+    padding: 0px;
 }
 

@@ -1,28 +1,30 @@
 <div class="container main-page col-md-3 col-sm-3 col-xs-12">
-  <div class="main-page-inner">
-    <div class="row" align="center">
-      <%= link_to "Articles", articles_path, class: "btn-active btn-left" %><!--
-      --><%= link_to "Videos", videos_path, class: "btn-inactive btn-right" %>
-    </div>
-    <div class="row">
-      <table>
-        <% @arr.each do |post, index| %>
-            <tr>
-              <td class="col-left" align="center">
-                <div class="table-index"><%= sprintf '%02d', index %></div>
-              </td>
-              <td class="col-right" align="left">
+  <div class="row">
+    <table>
+      <tr>
+        <td colspan="2" align="center">
+          <%= link_to "Articles", articles_path, class: "btn-active btn-left" %><!--
+            !--><%= link_to "Videos", videos_path, class: "btn-inactive btn-right" %>
+        </td>
+      </tr>
+    </table>
+    <table>
+      <% @arr.each do |post, index| %>
+          <tr>
+            <td class="col-left row-bottom" align="center">
+              <div class="table-index"><%= sprintf '%02d', index %></div>
+            </td>
+            <td class="col-right row-bottom" align="left">
                 <span class="headline-text">
                   <%= truncate post.postable.headline, length: 50, separator: ' ' %></br>
                 </span>
                 <span class="subheadline-text">
                   <%= post.postable.subHeadline.nil? ? "&nbsp;".html_safe : truncate(post.postable.subHeadline, length: 50, separator: ' ') %>
                 </span>
-              </td>
-            </tr>
-        <% end %>
-      </table>
-    </div>
+            </td>
+          </tr>
+      <% end %>
+    </table>
   </div>
 </div>
 <div class="col-md-9 col-xs-3"></div>
