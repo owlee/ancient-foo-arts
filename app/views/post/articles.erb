@@ -10,21 +10,25 @@
     </table>
     <table class="table-content">
       <% @arr.each do |post, index| %>
-          <tr background="<%= post.thumbnail%>">
+
+          <!-- style='background-image: url(<%= %>); background-repeat:no-repeat; width: 100%;'-->
+          <tr>
             <td class="col-left row-bottom-left" align="center">
               <div class="table-index"><%= sprintf '%02d', index %></div>
             </td>
             <td class="col-right row-bottom-right" align="left">
-                <div class="headline-text">
-                  <%= truncate post.postable.headline, length: 34, separator: ' ' %></br>
-                </div>
-                <div class="subheadline-text">
-                  <%= post.postable.subHeadline.nil? ? "&nbsp;".html_safe : truncate(post.postable.subHeadline, length: 32) %>
-                </div>
+              <div class="headline-text">
+                <%= truncate post.postable.headline, length: 34, separator: ' ' %></br>
+              </div>
+              <div class="subheadline-text">
+                <%= post.postable.subHeadline.nil? ? "&nbsp;".html_safe : truncate(post.postable.subHeadline, length: 32) %>
+              </div>
             </td>
-            <td class="">
+            <td>
 
             </td>
+
+            <%= image_tag post.thumbnail, class: 'tr-row' %>
           </tr>
       <% end %>
     </table>

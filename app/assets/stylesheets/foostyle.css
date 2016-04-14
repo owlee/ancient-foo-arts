@@ -212,4 +212,6 @@ tr {
     padding: 0px;
 }
 
-
+tr.background {
+    width: 100%;
+}
