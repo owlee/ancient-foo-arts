@@ -9,24 +9,16 @@
         <% @arr.each do |post, index| %>
             <tr>
               <td class="col-left" align="center">
-                <span class="headline-text"><%= sprintf '%02d', index %></span>
+                <div class="table-index"><%= sprintf '%02d', index %></div>
               </td>
               <td class="col-right" align="left">
                 <span class="headline-text">
                   <%= truncate post.postable.headline, length: 50, separator: ' ' %></br>
                 </span>
-              </td>
-            </tr><!--
-            !--><tr>
-              <td class="row-bottom"></td>
-              <td class="col-right row-bottom" align="left">
                 <span class="subheadline-text">
-                <%= post.postable.subHeadline.nil? ? "&nbsp;".html_safe : truncate(post.postable.subHeadline, length: 50, separator: ' ') %>
+                  <%= post.postable.subHeadline.nil? ? "&nbsp;".html_safe : truncate(post.postable.subHeadline, length: 50, separator: ' ') %>
                 </span>
               </td>
-            </tr>
-            <tr>
-              <th></th>
             </tr>
         <% end %>
       </table>

@@ -49,13 +49,13 @@
 .btn-left {
     border-top-right-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
-padding: 4px 40px 4px 55px;
+    padding: 4px 40px 4px 55px;
 }
 
 .btn-right {
     border-top-left-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
-padding: 4px 55px 4px 40px;
+    padding: 4px 55px 4px 40px;
 }
 
 .container-left-align {
@@ -100,6 +100,12 @@ padding: 4px 55px 4px 40px;
 
 .title-text {
     padding: 8px 0px 30px 13px;
+}
+
+.table-index {
+    font-weight: bold;
+    font-size: 13px;
+    padding: 0px 5px 20px 15px;
 }
 
 /*  ____________________   */
@@ -155,11 +161,11 @@ td {
 }
 
 td.col-left {
-    width: 10%;
+    width: 12%;
 }
 
 td.col-right {
-    width: 90%;
+    width: 88%;
 }
 
 td.row-bottom {
