@@ -156,21 +156,26 @@ table {
     margin-left: 13px;
     background-color: #ffffff;
     align-items: center;
-    border-radius: 3px
 }
 
 .table-btn {
-    padding: 9px 0px 9px 0px
+    padding: 9px 0px 9px 0px;
+    border-top-right-radius: 3px !important;
+    border-top-left-radius: 3px !important;
+}
+
+.table-content {
+    border-bottom-right-radius: 3px !important;
+    border-bottom-left-radius: 3px !important;
 }
 
 table td:hover img.inactive {
-    display:inline;
+    display: inline;
 }
 
 table td:hover img.active {
-    display:none;
+    display: none;
 }
-
 
 td {
     border-top: none !important;
