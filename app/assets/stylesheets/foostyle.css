@@ -151,7 +151,7 @@ table {
     table-layout: fixed;
     border: none;
     border-collapse: separate;
-    border-spacing: 5px;
+    border-spacing: 0px;
     width: 334px;
     margin-left: 13px;
     background-color: #ffffff;
@@ -162,6 +162,15 @@ table {
 .table-btn {
     padding: 9px 0px 9px 0px
 }
+
+table td:hover img.inactive {
+    display:inline;
+}
+
+table td:hover img.active {
+    display:none;
+}
+
 
 td {
     border-top: none !important;

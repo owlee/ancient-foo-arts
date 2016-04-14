@@ -10,7 +10,7 @@
     </table>
     <table>
       <% @arr.each do |post, index| %>
-          <tr>
+          <tr background="<%= post.thumbnail%>">
             <td class="col-left row-bottom-left" align="center">
               <div class="table-index"><%= sprintf '%02d', index %></div>
             </td>
