@@ -1,6 +1,6 @@
 <div class="container main-page col-md-3 col-sm-3 col-xs-12">
   <div class="row">
-    <table>
+    <table class="table-btn">
       <tr>
         <td colspan="2" align="center">
           <%= link_to "Articles", articles_path, class: "btn-active btn-left" %><!--
@@ -11,16 +11,19 @@
     <table>
       <% @arr.each do |post, index| %>
           <tr>
-            <td class="col-left row-bottom" align="center">
+            <td class="col-left row-bottom-left" align="center">
               <div class="table-index"><%= sprintf '%02d', index %></div>
             </td>
-            <td class="col-right row-bottom" align="left">
-                <span class="headline-text">
-                  <%= truncate post.postable.headline, length: 50, separator: ' ' %></br>
-                </span>
-                <span class="subheadline-text">
-                  <%= post.postable.subHeadline.nil? ? "&nbsp;".html_safe : truncate(post.postable.subHeadline, length: 50, separator: ' ') %>
-                </span>
+            <td class="col-right row-bottom-right" align="left">
+                <div class="headline-text">
+                  <%= truncate post.postable.headline, length: 34, separator: ' ' %></br>
+                </div>
+                <div class="subheadline-text">
+                  <%= post.postable.subHeadline.nil? ? "&nbsp;".html_safe : truncate(post.postable.subHeadline, length: 32) %>
+                </div>
+            </td>
+            <td class="">
+
             </td>
           </tr>
       <% end %>

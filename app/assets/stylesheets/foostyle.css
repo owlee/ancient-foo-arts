@@ -71,6 +71,7 @@
 .headline-text {
     font-weight: bold;
     font-size: 13px;
+    margin-top: 2px;
 }
 
 .main-page {
@@ -98,7 +99,8 @@
 
 .subheadline-text {
     font-size: 13px;
-    margin-bottom: 100px;
+    color: #7D7D7D;
+    padding-bottom: 4px;
 }
 
 .title-text {
@@ -108,7 +110,7 @@
 .table-index {
     font-weight: bold;
     font-size: 13px;
-    padding: 0px 5px 20px 15px;
+    padding: 0px 5px 20px 10px;
 }
 
 /*  ____________________   */
@@ -157,6 +159,10 @@ table {
     border-radius: 3px
 }
 
+.table-btn {
+    padding: 9px 0px 9px 0px
+}
+
 td {
     border-top: none !important;
     padding: 0 !important;
@@ -173,11 +179,14 @@ td.col-left {
 
 td.col-right {
     width: 88%;
-    padding: 0;
 }
 
-td.row-bottom {
+td.row-bottom-right {
     border-bottom: solid 1px #DED9DA;
+}
+
+td.row-bottom-left {
+    border-bottom: solid 1px #E9E9E9;
 }
 
 td.row-bottom-last {
@@ -188,4 +197,5 @@ tr {
     border-color: #000001;
     padding: 0px;
 }
+
 
