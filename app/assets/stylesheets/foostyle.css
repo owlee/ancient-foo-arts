@@ -180,23 +180,16 @@ hr {
 table {
     table-layout: fixed;
     border: none;
-    border-collapse: separate;
+    border-collapse: collapse;
     border-spacing: 0px;
-    width: 334px;
-    margin-left: 13px;
-    background-color: #ffffff;
-    align-items: center;
+    width: 100%;
+    #margin-left: 13px;
+    #align-items: center;
 }
 
-.table-btn {
-    padding: 9px 0px 9px 0px;
-    border-top-right-radius: 3px !important;
-    border-top-left-radius: 3px !important;
-}
-
-.table-content {
-    border-bottom-right-radius: 3px !important;
-    border-bottom-left-radius: 3px !important;
+.table-thumbnail-content {
+    background-size: 100% auto;
+    background-position: 0px -40px;
 }
 
 table td:hover img.inactive {
@@ -211,26 +204,12 @@ td {
     border-top: none !important;
     padding: 0 !important;
     max-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 }
 
 td.col-left {
-    width: 12%;
-    padding: 0;
+    width: 10%;
 }
 
 td.col-right {
-    width: 88%;
-}
-
-
-tr {
-    border-color: #000001;
-    padding: 0px;
-}
-
-tr.background {
-    width: 100%;
+    width: 90%;
 }
