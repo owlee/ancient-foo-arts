@@ -11,14 +11,18 @@
   <!-- Content -->
   <% @arr.each do |post, index| %>
       <div class="row" style="background-image:url(<%#= post.thumbnail %>);">
-        <div class="col-index col-lg-1 col-md-1 col-sm-1 col-xs-1">
-          <%= sprintf '%02d', index %>
+        <div class="col-index bottom-left-border col-lg-1 col-md-1 col-sm-1 col-xs-1">
+          <div class="row">
+            <%= sprintf '%02d', index %>
+            <br/>
+            <br/>
+          </div>
         </div>
         <div class="col-content col-lg-11 col-md-11 col-sm-11 col-xs-11">
           <div class="row headline-text">
             <%= post.postable.headline %>
           </div>
-          <div class="row subheadline-text">
+          <div class="row subheadline-text bottom-right-border">
             <%= post.postable.subHeadline.nil? ? "&nbsp;".html_safe : post.postable.subHeadline %>
           </div>
         </div>

@@ -75,7 +75,11 @@
 .headline-text {
     font-weight: bold;
     font-size: 13px;
-    margin-top: 2px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0px 0px 0px 0px;
 }
 
 .main-page {
@@ -102,10 +106,27 @@
     background-color: #191D20;
 }
 
+.bottom-right-border {
+    border-bottom: solid 1px #DED9DA;
+    width: 90%;
+}
+
+.bottom-left-border {
+    border-bottom: solid 1px #E9E9E9;
+}
+
+.bottom-last-border {
+    border-bottom: none;
+}
+
 .subheadline-text {
     font-size: 13px;
     color: #7D7D7D;
     padding-bottom: 4px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .title-text {
@@ -204,17 +225,6 @@ td.col-right {
     width: 88%;
 }
 
-td.row-bottom-right {
-    border-bottom: solid 1px #DED9DA;
-}
-
-td.row-bottom-left {
-    border-bottom: solid 1px #E9E9E9;
-}
-
-td.row-bottom-last {
-    border-bottom: none;
-}
 
 tr {
     border-color: #000001;
