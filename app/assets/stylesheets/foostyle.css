@@ -68,6 +68,10 @@
     padding-left: 0 !important;
 }
 
+.col-index {
+    padding: 1px 0px 0px 25px;
+}
+
 .headline-text {
     font-weight: bold;
     font-size: 13px;
@@ -88,6 +92,7 @@
 
 .main-page-inner {
     background-color: #ffffff;
+    margin-top: 10px;
     padding: 10px;
     align-items: center;
     border-radius: 3px
@@ -116,6 +121,10 @@
 /*  ____________________   */
 /*   Overriding Defaults   */
 /*  ____________________   */
+
+body {
+    background-color: #000001;
+}
 
 h5 {
     color: #FFFFFF;

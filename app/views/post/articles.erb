@@ -1,26 +1,28 @@
-<div class="main-page col-lg-3 col-md-3 col-sm-6 col-xs-12">
-  <div class="container">
-    <!-- Navigation Buttons -->
-    <div class="row">
+<div class="col-lg-3 col-md-3"></div>
+<div class=" main-page-inner container col-lg-5 col-md-5">
+  <!-- Navigation Buttons -->
+  <div class="row" align="center">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <%= link_to "Articles", articles_path, class: "btn-active btn-left" %><!--
     !--><%= link_to "Videos", videos_path, class: "btn-inactive btn-right" %>
     </div>
+  </div>
 
-    <!-- Content -->
-    <% @arr.each do |post, index| %>
-        <div class="row" style="background-image:url(<%#= post.thumbnail %>);">
-          <div class="col-index col-lg-1 col-md-1 col-sm-1 col-xs-1">
-            <%= sprintf '%02d', index %>
+  <!-- Content -->
+  <% @arr.each do |post, index| %>
+      <div class="row" style="background-image:url(<%#= post.thumbnail %>);">
+        <div class="col-index col-lg-1 col-md-1 col-sm-1 col-xs-1">
+          <%= sprintf '%02d', index %>
+        </div>
+        <div class="col-content col-lg-11 col-md-11 col-sm-11 col-xs-11">
+          <div class="row headline-text">
+            <%= post.postable.headline %>
           </div>
-          <div class="col-content col-lg-11 col-md-11 col-sm-11 col-xs-11">
-            <div class="row headline-text">
-              <%= truncate post.postable.headline, length: 34, separator: ' ' %>
-            </div>
-            <div class="row subheadline-text">
-              <%= post.postable.subHeadline.nil? ? "&nbsp;".html_safe : truncate(post.postable.subHeadline, length: 32) %>
-            </div>
+          <div class="row subheadline-text">
+            <%= post.postable.subHeadline.nil? ? "&nbsp;".html_safe : post.postable.subHeadline %>
           </div>
         </div>
-    <% end %>
-  </div>
+      </div>
+  <% end %>
 </div>
+<div class="col-lg-4 col-md-4"></div>
