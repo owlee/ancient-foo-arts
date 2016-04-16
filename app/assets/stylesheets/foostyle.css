@@ -58,6 +58,11 @@
     padding: 4px 55px 4px 40px;
 }
 
+.btn-row {
+    margin-top: 4px;
+    margin-bottom: 16px;
+}
+
 .container-left-align {
     margin-left: 0 !important;
     padding-left: 0 !important;
@@ -108,7 +113,6 @@
 
 .bottom-right-border {
     border-bottom: solid 1px #DED9DA;
-    width: 90%;
 }
 
 .bottom-left-border {
