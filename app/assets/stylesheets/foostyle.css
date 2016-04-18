@@ -102,13 +102,32 @@
 .main-page-inner {
     background-color: #ffffff;
     margin-top: 10px;
-    padding: 10px;
+    padding: 10px 0px 10px 0px;
     align-items: center;
     border-radius: 3px
 }
 
 .main-page-title {
     background-color: #191D20;
+}
+
+.open {
+    opacity: 0;
+}
+
+.row:hover .row-content .open{
+    opacity: 1;
+}
+
+.row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
 }
 
 .bottom-right-border {
@@ -121,6 +140,20 @@
 
 .bottom-last-border {
     border-bottom: none;
+}
+
+.row-content {
+    position: relative;
+    z-index: 1;
+}
+
+.row-content .table-thumbnail-content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: 100% auto;
+    background-position: 0px -40px;
+    z-index: -1;
 }
 
 .subheadline-text {
@@ -189,11 +222,6 @@ table {
     width: 100%;
     #margin-left: 13px;
     #align-items: center;
-}
-
-.table-thumbnail-content {
-    background-size: 100% auto;
-    background-position: 0px -40px;
 }
 
 table td:hover img.inactive {

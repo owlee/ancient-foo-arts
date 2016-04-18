@@ -1,5 +1,5 @@
 <div class="col-lg-3 col-md-3"></div>
-<div class=" main-page-inner container col-lg-5 col-md-5">
+<div class=" main-page-inner container no-gutters col-lg-5 col-md-5">
   <!-- Navigation Buttons -->
   <div class="row btn-row" align="center">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -10,11 +10,12 @@
 
   <!-- Content -->
   <% @arr.each do |post, index| %>
-      <div class="row" align="center">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="row no-gutters" align="center">
+        <div class="row-content col-md-12 col-sm-12 col-xs-12">
+          <div class="table-thumbnail-content open" style="background-image: url(<%= post.thumbnail %>);"></div>
           <table>
             <tr>
-              <td class="col-left table-index">
+              <td class="col-left table-index" align="center">
                 <%= sprintf '%02d', index %>
               </td>
               <td>
