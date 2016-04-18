@@ -11,26 +11,27 @@
   <!-- Content -->
   <% @arr.each do |post, index| %>
       <div class="row no-gutters" align="center">
-        <div class="row-content col-md-12 col-sm-12 col-xs-12">
-          <div class="table-thumbnail-content open" style="background-image: url(<%= post.thumbnail %>);"></div>
-          <table>
-            <tr>
-              <td class="col-left table-index" align="center">
-                <%= sprintf '%02d', index %>
-              </td>
-              <td>
-                <div class="col-right headline-text"><%= post.postable.headline %></div>
-              </td>
-            </tr>
-            <tr>
-              <td class="bottom-left-border"></td>
-              <td class="subheadline-text bottom-right-border">
-                <%= post.postable.subHeadline.nil? ? "&nbsp;".html_safe : post.postable.subHeadline %>
-              </td>
-            </tr>
-          </table>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="row-content">
+            <div class="table-thumbnail-content open" style="background-image: url(<%= post.thumbnail %>);"></div>
+            <table>
+              <tr>
+                <td class="col-left table-index" align="center">
+                  <%= sprintf '%02d', index %>
+                </td>
+                <td>
+                  <div class="col-right headline-text"><%= post.postable.headline %></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="bottom-left-border"></td>
+                <td class="subheadline-text bottom-right-border">
+                  <%= post.postable.subHeadline.nil? ? "&nbsp;".html_safe : post.postable.subHeadline %>
+                </td>
+              </tr>
+            </table>
+          </div>
         </div>
-
       </div>
   <% end %>
 </div>

@@ -113,10 +113,12 @@
 
 .open {
     opacity: 0;
+    transition: all .2s ease-in-out;
 }
 
 .row:hover .row-content .open {
     opacity: 1;
+    transform: scale(1.25);
 }
 
 .row.no-gutters {
@@ -143,6 +145,7 @@
 }
 
 .row-content {
+    overflow: hidden;
     position: relative;
     z-index: 1;
 }
