@@ -3,6 +3,8 @@ class Post < ActiveRecord::Base
   friendly_id :slug
   belongs_to :postable, polymorphic: true
 
+  default_scope { order('publishDate DESC') }
+
   def publish_age_less
     @age ||= publish_age
 
