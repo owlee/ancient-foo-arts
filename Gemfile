@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'json'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'autoprefixer-rails'
-gem 'friendly_id'
+#gem 'friendly_id'
 gem 'will_paginate'
 gem 'rails_12factor', group: :production
 
