@@ -14,6 +14,7 @@ class PostController < ApplicationController
       # and limit the results to 5
       @articles = Post.where(postable_type: 'Article').where('id < ?', params[:id]).limit(@@per_page)
     else
+      binding.pry
       @articles = Post.where(postable_type: 'Article').limit(@@per_page)
       #@articles = User.limit(@@per_page)
     end

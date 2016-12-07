@@ -12,10 +12,3 @@ test:
   database: inventory_test
   pool: 5
   timeout: 5000
-
-production:
-  adapter: postgresql
-  encoding: utf8
-  database: inventory_production
-  pool: 5
-  timeout: 5000
