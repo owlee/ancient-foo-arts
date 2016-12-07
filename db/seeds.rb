@@ -9,10 +9,10 @@ puts 'Seeding process has begun...'
 startTime = Time.now
 
 puts 'Updating Articles...'
-Ign::ArticleApi.get_articles
+ArticleApi.get_articles
 
 puts 'Updating Videos...'
-Ign::VideoApi.get_videos
+VideoApi.get_videos
 
 endTime = Time.now
 puts "Seeding has completed in #{endTime-startTime}ms"
