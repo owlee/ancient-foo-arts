@@ -1,6 +1,6 @@
 require 'open-uri'
 
-class Ign::ArticleApi
+class ArticleApi
 
   # Get Articles only if it is within a reasonable time frame from last update.
   def self.get_articles count=20, startIndex=0

@@ -1,6 +1,6 @@
 require 'open-uri'
 
-class Ign::VideoApi
+class VideoApi
 
   def self.get_videos count=20, startIndex=0
     api = open "http://ign-apis.herokuapp.com/videos?count=#{count}&startIndex=#{startIndex}"
