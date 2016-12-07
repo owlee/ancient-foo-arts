@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160401212233) do
+ActiveRecord::Schema.define(version: 20161207055409) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "articles", force: :cascade do |t|
     t.string   "headline"
@@ -27,13 +30,13 @@ ActiveRecord::Schema.define(version: 20160401212233) do
     t.string   "thumbnail"
     t.string   "state"
     t.string   "slug"
-    t.datetime "publishDate"
+    t.datetime "publishdate"
     t.string   "networks"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
 
-  add_index "posts", ["postable_type", "postable_id"], name: "index_posts_on_postable_type_and_postable_id"
+  add_index "posts", ["postable_type", "postable_id"], name: "index_posts_on_postable_type_and_postable_id", using: :btree
 
   create_table "videos", force: :cascade do |t|
     t.string   "name"

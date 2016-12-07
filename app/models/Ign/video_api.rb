@@ -34,7 +34,7 @@ class Ign::VideoApi
               thumbnail: video["thumbnail"],
               state: video["metadata"]["state"],
               slug: video["metadata"]["slug"],
-              publishDate: video["metadata"]["publishDate"].to_datetime,
+              publishdate: video["metadata"]["publishDate"].to_datetime,
               networks: video["metadata"]["networks"],
               postable_type: v1.class,
               postable_id: v1.id

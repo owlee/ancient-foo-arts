@@ -5,7 +5,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :thumbnail
       t.string :state
       t.string :slug
-      t.datetime :publishDate
+      t.datetime :publishdate
       t.string :networks
 
       t.timestamps null: false

@@ -24,11 +24,10 @@ class Ign::ArticleApi
               thumbnail: article["thumbnail"],
               state: article["metadata"]["state"],
               slug: article["metadata"]["slug"],
-              publishDate: article["metadata"]["publishDate"].to_datetime,
+              publishdate: article["metadata"]["publishDate"].to_datetime,
               networks: article["metadata"]["networks"],
               postable_type: a1.class,
-              postable_id: a1.id
-          ).first_or_create
+              postable_id: a1.id).first_or_create
 
           raise 'Post already Exists, this case should not happen.' if post.nil?
 
